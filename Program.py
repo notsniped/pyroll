@@ -33,4 +33,6 @@ button1 = Button(
 button1.pack(pady=125)
 
 try: root.mainloop()
-except KeyboardInterrupt: messagebox.showinfo("Imagine being oversmart", "Trying to escape? lol sussy baka")
+except KeyboardInterrupt: 
+    messagebox.showinfo("Imagine being oversmart", "Trying to escape? lol sussy baka")
+    newBrowserWindow()
