@@ -1,4 +1,5 @@
 # Imports
+import atexit
 from tkinter import *
 from tkinter import messagebox
 import webbrowser
@@ -13,7 +14,9 @@ root.resizable(False, False)
 root.config(background="#121212")
 
 # Pre-defined methods
-def newBrowserWindow(): webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+def exit_handler():
+    messagebox.showinfo("Imagine being oversmart", "Trying to escape? lol sussy baka")
+    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
 
 # Object Mapping
 button1 = Button(
@@ -32,7 +35,5 @@ button1 = Button(
 )
 button1.pack(pady=125)
 
-try: root.mainloop()
-except KeyboardInterrupt: 
-    messagebox.showinfo("Imagine being oversmart", "Trying to escape? lol sussy baka")
-    newBrowserWindow()
+atexit.register(exit_handler)
+root.mainloop()
